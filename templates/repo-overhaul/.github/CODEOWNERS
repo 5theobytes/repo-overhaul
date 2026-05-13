@@ -1,0 +1,14 @@
+# CODEOWNERS — automatic review assignment.
+# Each line is a file pattern followed by one or more owners.
+# Patterns are matched bottom-to-top; later wins.
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo:
+# *       @your-org/maintainers
+
+# Path-specific overrides:
+# /docs/    @your-org/docs
+# /infra/   @your-org/infra
+# *.md      @your-org/docs
+
+# Replace placeholders before committing this file.

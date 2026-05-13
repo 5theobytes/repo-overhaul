@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "deny": [
+      "Read(./.trash/**)",
+      "Read(.trash/**)",
+      "Read(./.qoder/**)",
+      "Read(.qoder/**)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(**/report_*.xlsx)",
+      "Read(**/report_*.csv)",
+
+      "Edit(./.trash/**)",
+      "Edit(.trash/**)",
+      "Edit(./.qoder/**)",
+      "Write(./.trash/**)",
+      "Write(.trash/**)",
+      "Write(./.qoder/**)",
+
+      "Glob(./.trash/**)",
+      "Glob(.trash/**)",
+      "Grep(./.trash/**)",
+      "Grep(.trash/**)",
+
+      "Bash(cat .trash/*)",
+      "Bash(cat ./.trash/*)",
+      "Bash(ls .trash/*)",
+      "Bash(cp .trash/*)",
+      "Bash(mv .trash/*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Write|Edit|MultiEdit|NotebookEdit|Glob|Grep|Bash|WebFetch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/protect-trash.cjs\""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+name: ✨ Feature request
+description: Propose a new feature or enhancement
+title: "[Feature] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose a new feature. Focus on the **problem**, not the
+        implementation — there may be a better solution than the one you
+        have in mind.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What use case are you trying to solve? Why is the current behaviour insufficient?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Optional — your suggested approach.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I have searched existing issues and discussions
+          required: true

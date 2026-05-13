@@ -1,0 +1,14 @@
+# Per-user Claude Code settings (not portable across machines)
+.claude/settings.local.json
+*.local.json
+
+# OS / IDE junk
+.DS_Store
+Thumbs.db
+/.vscode/
+/.idea/
+/.cursor/
+/.qoder/
+
+# Node (if someone adds a package later)
+node_modules/
